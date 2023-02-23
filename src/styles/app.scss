@@ -1,0 +1,247 @@
+@import "globals";
+
+//@import "components/ArticleContent";
+//@import "components/ArticleList";
+// @import "components/ArticlesItem";
+// @import "components/Collection";
+// @import "components/CollectionItem";
+// @import "components/ErrorTemplate";
+// @import "components/FaqItem";
+// @import "components/Footer";
+// @import "components/Header";
+// @import "components/LanguageBar";
+// @import "components/LanguageSwitcher";
+// @import "components/LocaleSwitcher";
+// @import "components/Mindset";
+// @import "components/MindsetViewMore";
+// @import "components/Navbar";
+// @import "components/hamburgerAnimation";
+// @import "components/PromoModule";
+// @import "components/PromoModuleItem";
+// @import "components/SupportLinks";
+
+@import "pages/article";
+@import "pages/audit";
+@import "pages/category";
+@import "pages/dgquiz";
+@import "pages/home";
+@import "pages/quiz";
+
+:root {
+  // Note: Custom variable values only support SassScript inside `#{}`.
+
+  // Colors
+  //
+  // Generate palettes for full colors, grays, and theme colors.
+
+  @each $color, $value in $colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $grays {
+    --#{$prefix}gray-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-rgb {
+    --#{$prefix}#{$color}-rgb: #{$value};
+  }
+
+  --#{$prefix}white-rgb: #{to-rgb($white)};
+  --#{$prefix}black-rgb: #{to-rgb($black)};
+  --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+
+  // Fonts
+
+  // Note: Use `inspect` for lists so that quoted items keep the quotes.
+  // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
+  --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
+  --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
+  --#{$prefix}gradient: #{$gradient};
+
+  // Root and body
+  // scss-docs-start root-body-variables
+  @if $font-size-root != null {
+    --#{$prefix}root-font-size: #{$font-size-root};
+  }
+  --#{$prefix}body-font-family: #{$font-family-base};
+  @include rfs($font-size-base, --#{$prefix}body-font-size);
+  --#{$prefix}body-font-weight: #{$font-weight-base};
+  --#{$prefix}body-line-height: #{$line-height-base};
+  --#{$prefix}body-color: #{$body-color};
+  @if $body-text-align != null {
+    --#{$prefix}body-text-align: #{$body-text-align};
+  }
+  --#{$prefix}body-bg: #{$body-bg};
+  // scss-docs-end root-body-variables
+
+  // scss-docs-start root-border-var
+  --#{$prefix}border-width: #{$border-width};
+  --#{$prefix}border-style: #{$border-style};
+  --#{$prefix}border-color: #{$border-color};
+  --#{$prefix}border-color-translucent: #{$border-color-translucent};
+
+  --#{$prefix}border-radius: #{$border-radius};
+  --#{$prefix}border-radius-sm: #{$border-radius-sm};
+  --#{$prefix}border-radius-lg: #{$border-radius-lg};
+  --#{$prefix}border-radius-xl: #{$border-radius-xl};
+  --#{$prefix}border-radius-2xl: #{$border-radius-2xl};
+  --#{$prefix}border-radius-pill: #{$border-radius-pill};
+  // scss-docs-end root-border-var
+
+  --#{$prefix}link-color: #{$link-color};
+  --#{$prefix}link-hover-color: #{$link-hover-color};
+
+  --#{$prefix}code-color: #{$code-color};
+
+  --#{$prefix}highlight-bg: #{$mark-bg};
+}
+
+.footer {
+  background-color: #2314a7;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .footernav {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .footernav-link {
+    font-size: 13px;
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+#dg_footer_wrapper_inner ul {
+  list-style: none;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  text-align: right;
+}
+footer #footer #dg_footer_wrapper ul li a {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 400;
+  opacity: 1;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  padding-right: 0;
+  text-align: right;
+}
+.footer__right {
+  text-align: right;
+}
+.modal {
+  z-index: 9999;
+}
+
+.footer__copywrite {
+  color: #fff;
+  opacity: 0.5;
+  padding-top: 15px;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.modal-header {
+  border: none;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal-footer {
+  padding-bottom: 50px;
+  flex-direction: column;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+.btn-nostyle {
+  color: #2314a7;
+}
+
+.fade-in-image {
+  animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

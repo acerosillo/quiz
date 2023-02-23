@@ -1,0 +1,108 @@
+@import "./styles/_variables.scss";
+
+.nav-open {
+  .languagebar {
+    z-index: -1;
+  }
+}
+
+.languagebar {
+  display: none;
+
+  .locales {
+    &__list {
+      margin-top: 0;
+      background-color: $cl-violet2;
+
+      &.open {        
+        // border-top: 1px solid $cl-green;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include media-breakpoint-down(sm) {
+          // margin-top: 15px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+    &__current {
+      white-space: nowrap;
+    }
+
+    &__title {
+      color: $cl-blue;
+      border-bottom: 1px solid $cl-violet;
+    }
+
+    &__name {
+      a {
+        color: $cl-blue;
+
+        &:hover {
+          color: $cl-blue;
+        }
+      }
+    }
+  }
+
+  .icon {
+    &-close {
+      position: absolute;
+      right: -5px;
+      top: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.layout {
+  .languagebar {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease-in-out;
+  }
+
+  &.showlangbar {
+    .languagebar {
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      width: 100%;
+      flex: 0 0 100%;
+
+      background-color: $cl-violet2;
+      color: $cl-black;
+      transition: 0.3s all ease-in-out;
+
+      position: relative;
+
+      > .container {
+        @media only screen and (max-width: 1366px) {
+          max-width: 95%;
+        }
+
+        @include media-breakpoint-down(lg) {
+          max-width: 960px;
+        }
+
+        @include media-breakpoint-down(md) {
+          max-width: 960px;
+        }
+      }
+    }
+  }
+
+  /*hide language bar on quiz start pages */
+  .quiz-toggle {
+    .languagebar {
+      display: none;
+    }
+  }
+}

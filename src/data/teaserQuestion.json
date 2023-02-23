@@ -1,0 +1,75 @@
+[
+  {
+    "text": "How much do you know about alcohol?",
+    "answerDescription": "",
+    "colourway": "Orange",
+    "optionsImage": null,
+    "desktopAnswerImages": [
+      {
+        "name": "DRINKIQ Quiz 4X3 Contained S 4",
+        "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/hdrdm5ux/drinkiq-quiz-4x3-contained_s-4.png",
+        "caption": ""
+      },
+      {
+        "name": "DRINKIQ Quiz 4X3 Contained S 3",
+        "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/5uxiobqq/drinkiq-quiz-4x3-contained_s-3.png",
+        "caption": ""
+      },
+      {
+        "name": "DRINKIQ Quiz 4X3 Contained S 2",
+        "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/k0zlp22h/drinkiq-quiz-4x3-contained_s-2.png",
+        "caption": ""
+      },
+      {
+        "name": "DRINKIQ Quiz 4X3 Contained S 1",
+        "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/hgrjdurw/drinkiq-quiz-4x3-contained_s-1.png",
+        "caption": ""
+      }
+    ],
+    "mobileAnswerImages": [],
+    "isBinary": false,
+    "options": [
+      {
+        "id": "5306",
+        "text": "I have an excellent knowledge",
+        "image": {
+          "name": "DRINKIQ Quiz 4X3 Contained S 4",
+          "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/hdrdm5ux/drinkiq-quiz-4x3-contained_s-4.png",
+          "caption": ""
+        },
+        "correct": false
+      },
+      {
+        "id": "5308",
+        "text": "I know quite a lot about alcohol",
+        "image": {
+          "name": "DRINKIQ Quiz 4X3 Contained S 3",
+          "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/5uxiobqq/drinkiq-quiz-4x3-contained_s-3.png",
+          "caption": ""
+        },
+        "correct": false
+      },
+      {
+        "id": "5307",
+        "text": "I know a little bit about alcohol",
+        "image": {
+          "name": "DRINKIQ Quiz 4X3 Contained S 2",
+          "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/k0zlp22h/drinkiq-quiz-4x3-contained_s-2.png",
+          "caption": ""
+        },
+        "correct": false
+      },
+      {
+        "id": "5305",
+        "text": "I don't know anything about alcohol at all",
+        "image": {
+          "name": "DRINKIQ Quiz 4X3 Contained S 1",
+          "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/hgrjdurw/drinkiq-quiz-4x3-contained_s-1.png",
+          "caption": ""
+        },
+        "correct": false
+      }
+    ],
+    "followUpQuestion": null
+  }
+]

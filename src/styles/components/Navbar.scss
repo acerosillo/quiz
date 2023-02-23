@@ -1,0 +1,289 @@
+@import "./styles/_variables.scss";
+@import "./styles/_typography.scss";
+@import "./styles/_animations.scss";
+
+.nav {
+  &__wrapper {
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+  }
+
+  &__wrap {
+    width: 100%;
+    flex: 0 0 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 40px;
+
+    
+    .logo {
+      display: flex;
+      width: fit-content;
+
+      &__link {
+        display: flex;
+        width: auto;
+        flex: auto;
+
+        img {
+          width: auto;
+          height: 32px;
+
+          @include media-breakpoint-down(md) {
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .field__wrap {
+      display: flex;
+      flex: 0 0 100%;
+      width: 100%;
+      height: auto;
+
+      @include media-breakpoint-down(md) {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  &.navbar-nav-scroll {
+    flex: 0 0 100%;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+
+    transition: 0.1s all ease-in-out;
+
+    padding-top: 80px;
+
+    &-overflow {
+      height: calc(100% - 79px);
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+      height: 100vh;
+    }
+
+    @media only screen and (max-width: 1365px) {
+      @media only screen and (min-resolution: 120dpi)
+        and (min-resolution: 1.5dppx)
+        and (pointer: fine) {
+        padding-top: 20px;
+        max-height: 100vh;
+
+        height: calc(100% - 79px);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 50px;
+      padding-bottom: 50px;      
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 125px;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      flex: 0 0 100%;
+      padding-bottom: 80px;
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 30px;
+      }
+    }
+
+    .secondary-nav {
+      padding-bottom: 0;
+
+      .nav-item {
+        width: 100%;
+
+        label {
+          color: $cl-white;
+          word-break: keep-all;
+          white-space: nowrap;
+        }
+      }
+
+      .nav-link {
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+  &-item {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    border-bottom: 1px solid $cl-white-opaque;    
+    opacity: 0;
+    left: 100%;
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 10px;
+    }
+
+    &.fadeInRight {
+      opacity: 1;
+      left: 0;
+      animation-name: fadeInRightMenu;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-duration: 0.3s;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--sub{
+      padding-bottom: 20px;
+      border: 0;
+    }
+
+    .icon {
+      right: 0;
+    }
+  }
+
+  &-link {
+    font-size: 24px;
+    font-weight: $font-bold;
+    color: $cl-white;
+    position: relative;
+    transition: 0.3s all ease-in-out;
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: $cl-white;
+      transition: 0.3s all ease-in-out;
+      opacity: 0.6;
+    }
+
+    &--sec {
+      font-size: 16px;
+      font-weight: $font-regular;
+      width: fit-content;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $cl-white;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+
+  }
+
+  &.navbar-nav-scroll {
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      color: $cl-white;
+      border: none;
+    }
+    .secondary-nav {
+      .nav-item {
+        &:last-child {
+          .nav-link {
+            // border-bottom: none;
+            // uncomment this for language switcher
+          }
+        }
+      }
+    }
+  }
+}
+
+.search {
+  &__icon {
+    width: 34px;
+    height: 32px;
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      height: 24px;
+      width: 34px;
+    }
+  }
+
+  &__field {
+    display: none;
+  }
+}
+
+.nav-open {
+  .search {
+    &__icon{
+      display: none;
+    }
+
+    &__field {
+      display: flex;
+      width: 100%;
+
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 40px;
+
+      color: $cl-white;
+
+      background-image: url('/static/images/icons/search_icon_cl_white.svg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 32px;
+      background-color: transparent;
+
+      border: none;
+      border-bottom: 1px solid $cl-white-opaque;
+
+      letter-spacing: 1px;
+
+      &:focus, &:active {
+        outline: none;
+        -webkit-appearance: none;
+      }
+    }
+  }
+
+  .navbar-nav-scroll {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s all ease-in-out;
+    display: flex;
+  }
+}
+
+.nav__locales {
+  display: flex;
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+#mainLayout {
+  &.nav-open {
+    main {
+      position: fixed;
+    }
+  }
+}

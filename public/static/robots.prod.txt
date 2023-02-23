@@ -1,0 +1,11 @@
+Sitemap: https://www.drinkiq.com/sitemap.xml
+
+User-agent: Googlebot
+Disallow: /api/*
+
+User-agent: Googlebot-image
+Disallow: /api/*
+
+User-agent: *
+Allow: /*
+Disallow: /api/*

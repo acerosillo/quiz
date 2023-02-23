@@ -1,0 +1,152 @@
+@import "./styles/_variables.scss";
+
+.footer {
+  background-color: $cl-blue;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .col-xs-6 {
+    width: 50%;
+  }
+
+  .col-xs-4 {
+    @include media-breakpoint-down(xs) {
+      width: 33.33333%;
+    }
+  }
+
+  .col-xs-8 {
+    @include media-breakpoint-down(xs) {
+      width: 66.66667%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 30px;
+  }
+
+  &__logo {
+    a {
+      display: inline-block;
+      width: auto;
+      height: auto;
+    }
+    img {
+      width: auto;
+      height: 25px;
+    }
+  }
+
+  &__copywrite {
+    color: $cl-white;
+    opacity:0.5;
+    padding-top: 15px;
+  }
+
+  &__right {
+    text-align: right;
+
+    @include media-breakpoint-down(md) {
+      
+    }
+  }
+
+  .footernav {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    &-item {
+      padding: 5px 0;
+    }
+
+    &-link {
+      font-size: 13px;
+      color: $cl-white;
+      opacity: 1;
+      text-decoration: none;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        text-decoration: none;
+        transition: 0.3s all ease-in-out;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  #footer {
+    #dg_footer_wrapper {
+      background-color: transparent;
+
+      .dg_footer_row_0 {
+        padding: 0;
+      }
+
+      ul {
+        display: block;
+        padding: 0;
+
+        li {
+          display: flex;
+          justify-content: flex-end;
+          justify-items: flex-end;
+
+          &.dg_footer_item_last, 
+          &.dg_footer_item_9,
+          &.dg_footer_item_8,
+          &.dg_footer_item_6 {
+            display: none;
+          }
+
+          &:after {
+            display: none;
+          }
+
+          a {
+            font-size: 13px;
+            color: $cl-white;
+            font-weight: 400;
+            opacity: 1;
+            text-decoration: none;
+            transition: 0.3s all ease-in-out;
+            padding-right: 0;
+            text-align: right;
+
+            &:hover {
+              text-decoration: none;
+              transition: 0.3s all ease-in-out;
+              opacity: 0.5;
+            }
+          }
+
+          span {
+            font-size: 13px;
+            font-weight: 400;
+            color: $cl-white;
+            opacity: 1;
+            text-decoration: none;
+            transition: 0.3s all ease-in-out;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: right;
+          }
+
+          &.dg_footer_item_7,
+          &.dg_footer_item_5 {
+            a {
+              padding-right: 25px;
+
+              background-image: url('/static/images/icons/icon_link_cl_white.svg');
+              background-repeat: no-repeat;
+              background-position: right center;
+              background-size: 16px;
+            }
+          }
+        }
+
+
+      }
+    }
+  }
+}

@@ -1,0 +1,293 @@
+@import "./styles/_typography.scss";
+@import "./styles/_variables.scss";
+
+.audit {
+  .heading{
+    &__copy {
+      > .col-lg-10.col-md-9 {
+
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        p {
+          padding-bottom: 30px;
+        }
+
+        .lcallout {
+          display: flex;
+          width: 100%;
+          flex: 0 0 100%;
+          flex-wrap: wrap;
+
+          padding-bottom: 30px;
+          position: relative;
+
+          @include media-breakpoint-down(md) {
+            padding-bottom: 40px;
+          }
+
+          &__wrap, &__link {
+            display: flex;
+            width: 100%;
+            flex: 0 0 100%;
+            flex-wrap: wrap;
+          }
+
+          &__wrap {
+            background-color: $cl-grey-opaque;
+          }
+
+          &__link {
+            text-decoration: none;
+            flex-wrap: wrap;
+            display: flex;
+            width: 100%;
+            flex: 0 0 100%;
+            transition: 0.1s all ease-in-out;
+
+            @media only screen and (max-width: 575px) {
+
+            }
+
+            &:hover {
+              .lcallout__linkname {
+                text-decoration: underline;
+              }
+
+              transition: 0.1s all ease-in-out;
+              box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+            }
+          }
+
+          &__imagewrap {
+            width: 20%;
+            flex: 0 0 20%;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+
+            @media only screen and (max-width: 575px) {
+              display: none;  
+            }
+
+            img {
+              width: auto;
+              height: auto;
+              max-width: 100%;
+              object-fit: contain;
+            }
+
+          }
+
+          &__content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 25px;
+            width: 80%;
+            flex: 0 0 80%;
+
+            overflow: hidden;
+            max-height: 102px;
+
+            align-items: center;
+            align-content: center;
+
+            @media only screen and (max-width: 1365px) {
+              padding: 8px 25px;
+              max-height: 88px;
+            }
+
+            @include media-breakpoint-down(lg) {
+              max-height: 114px;
+              padding: 10px 25px;
+            }
+
+            @include media-breakpoint-down(md) {
+              max-height: 74px;
+              padding: 8px 25px;
+            }
+
+            @media only screen and (max-width: 575px) {
+              flex-direction: initial;
+              max-height: 100%;
+              padding: 25px;
+              width: 100%;
+              flex: 0 0 100%
+            }
+          }
+
+          //styling for large lcallouts (specifically en-gb audit)
+          .large {
+            max-height: 100%;
+            .lcallout {
+              &__imagewrap {
+                position: relative;
+                img {
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%);    
+                  width: auto;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              &__content {
+                max-height: 100%;
+              }
+            }
+          }
+
+          &__title {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: $font-extrabold;
+            color: $cl-black;
+            padding-bottom: 10px;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+
+            @media only screen and (max-width: 1365px) {
+              padding-bottom: 5px;
+            }
+
+            @include media-breakpoint-down(md) {
+              padding-bottom: 3px;
+            }
+
+            @include media-breakpoint-down(xs) {
+              padding-bottom: 10px;
+            }
+          }
+
+          &__linkname {
+            font-size: 16px;
+            line-height: 22px;
+            color: $cl-blue;
+            word-break: break-all;      
+
+            @media only screen and (max-width: 575px) {
+              display: flex;
+              width: 100%;
+              flex: 0 0 100%;
+            }
+          }
+
+          .icon-link {
+            position: absolute;
+            top: 10px;
+            right:10px;
+
+            width: 25px;
+            height: 25px;
+            opacity: 0;
+            visibility: hidden;
+
+            @include media-breakpoint-down(xs) {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.resultcol {
+  > .row {
+    .resultblock {
+      flex: 0 0 100%;
+    }
+  }
+}
+
+.article {
+  .atrisk, .resultblock {
+    padding-bottom: 50px;
+
+    &__wrap {
+      display: flex;
+      width: 100%;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+
+      padding: 30px 25px;
+      background-color: $cl-grey2;
+      position: relative;
+    }
+
+    .headline {
+      font-size: 24px;
+      line-height: 32px;
+      padding-bottom: 15px;
+    }
+
+    .content {
+      display: flex;
+      width: 100%;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: flex-start;
+
+
+      * {
+        display: flex;
+        width: 100%;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+      }
+    }
+
+    .description, .link {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .description {
+      padding-bottom: 15px;
+    }
+
+    .link {
+      color: $cl-blue;
+    }
+
+    .icon-link {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 15px;
+      top: 15px;
+    }
+
+    .col-md-12 {
+      &.resultcol {
+        &:after {
+          display: block;
+          content: ' ';
+          width: 100%;
+          height: 1px;
+          background-color: #e4e4e4;
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        &:last-child {
+          
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.btn {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+
+  border: 1px;
+  border-radius: 100px;
+
+  padding: 12px 28px;
+  transition: 0.3s all ease-in-out;
+
+  &-default {
+    color: $cl-blue;
+    border: 1px solid $cl-blue;
+
+    &:hover {
+      transition: 0.3s all ease-in-out;
+      color: $cl-blue2;
+      border-color: $cl-blue2;
+    }
+
+    &:active {
+      transition: 0.3s all ease-in-out;
+      color: $cl-blue3;
+      border-color: $cl-blue3;
+    }
+  }
+
+  &-white {
+    background-color: $cl-white;
+    border: 1px solid $cl-white;
+
+    &:hover {
+      transition: 0.3s all ease-in-out;
+      color: $cl-white;
+      border-color: $cl-white;
+      background-color: transparent;
+    } 
+  }
+
+  &-main {
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      transition: 0.3s all ease-in-out;
+      background-color: $cl-blue2;
+    }
+
+    &:active {
+      transition: 0.3s all ease-in-out;
+      background-color: $cl-blue3;
+    }
+  }
+
+  &-fill {
+    text-decoration: none;
+    color: $cl-white;
+
+    &:hover {
+      color: $cl-white;
+    }
+
+    &--blue {
+      background-color: $cl-blue;
+    }
+
+    &--gray {
+      pointer-events: none;
+      background-color: lightgray;
+
+      &:active {
+        background-color: lightgray;
+      }
+
+      &:hover {
+        &.touchEnabled {
+          background-color: lightgray;
+        }
+      }
+
+      &:focus {
+        &.touchEnabled {
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &--secondary {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-nostyle {
+    background-color: transparent;
+    border: none;
+  }
+}

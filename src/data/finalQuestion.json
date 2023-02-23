@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Do you now feel you know more about alcohol and its effects on the body?",
+    "answerDescription": "",
+    "colourway": "Pink",
+    "optionsImage": {
+      "name": "DRINKIQ Quiz 4X3 Contained Q11",
+      "url": "https://api.drinkiq.com/PR1632api.drinkiq.com/media/5tjhdcjq/drinkiq-quiz-4x3-contained_q11.png",
+      "caption": "",
+      "cropFocalPoint": {
+        "top": 0.0,
+        "left": 0.0
+      }
+    },
+    "desktopAnswerImages": [],
+    "mobileAnswerImages": [],
+    "isBinary": true,
+    "options": [
+      {
+        "id": "5340_A",
+        "text": "Yes",
+        "image": null,
+        "correct": false
+      },
+      {
+        "id": "5340_B",
+        "text": "No",
+        "image": null,
+        "correct": true
+      }
+    ],
+    "followUpQuestion": null
+  }
+]

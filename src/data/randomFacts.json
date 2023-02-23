@@ -1,0 +1,86 @@
+[
+  {
+    "text": "Wine is just as fattening as beer.",
+    "altText": "Fact or fiction?",
+    "image": {
+      "name": "DRINKIQ Quiz 4X3 Start Wine",
+      "url": "assets/img/teaserQuestion/drinkiq-quiz-4x3-start-wine.png",
+      "caption": "",
+      "cropFocalPoint": {
+        "top": 0.0,
+        "left": 0.0
+      }
+    },
+    "colourway": null
+  },
+  {
+    "text": "Mixing drinks will get you drunk faster.",
+    "altText": "Fact or fiction?",
+    "image": {
+      "name": "DRINKIQ Quiz 4X3 Start 4",
+      "url": "assets/img/teaserQuestion/drinkiq-quiz-4x3-start_4.png",
+      "caption": "",
+      "cropFocalPoint": {
+        "top": 0.0,
+        "left": 0.0
+      }
+    },
+    "colourway": null
+  },
+  {
+    "text": "Drinking beer is healthier than a cocktail.",
+    "altText": "Fact or fiction?",
+    "image": {
+      "name": "DRINKIQ Quiz 4X3 Start Beer",
+      "url": "assets/img/teaserQuestion/drinkiq-quiz-4x3-start-beer.png",
+      "caption": "",
+      "cropFocalPoint": {
+        "top": 0.0,
+        "left": 0.0
+      }
+    },
+    "colourway": null
+  },
+  {
+    "text": "We all feel the effects of alcohol equally.",
+    "altText": "Fact or fiction?",
+    "image": {
+      "name": "DRINKIQ Quiz 4X3 Start 2",
+      "url": "assets/img/teaserQuestion/drinkiq-quiz-4x3-start_2.png",
+      "caption": "",
+      "cropFocalPoint": {
+        "top": 0.0,
+        "left": 0.0
+      }
+    },
+    "colourway": null
+  },
+  {
+    "text": "Drinking beer is healthier than wine or spirits.",
+    "altText": "Fact or fiction?",
+    "image": {
+      "name": "DRINKIQ Quiz 4X3 Start Beer",
+      "url": "assets/img/teaserQuestion/drinkiq-quiz-4x3-start-beer.png",
+      "caption": "",
+      "cropFocalPoint": {
+        "top": 0.0,
+        "left": 0.0
+      }
+    },
+    "colourway": null
+  },
+  {
+    "text": "The liver takes a day to process 1 unit of alcohol/a standard drink of alcohol.",
+    "altText": "Fact or fiction?",
+    "image": {
+      "name": "DRINKIQ Quiz 4X3 Start 5",
+      "url": "assets/img/teaserQuestion/drinkiq-quiz-4x3-start_5.png",
+      "caption": "",
+      "cropFocalPoint": {
+        "top": 0.0,
+        "left": 0.0
+      }
+    },
+    "colourway": null
+  }
+]

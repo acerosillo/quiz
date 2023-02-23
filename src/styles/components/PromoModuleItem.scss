@@ -1,0 +1,42 @@
+.article {
+  .collection {
+    &__image {
+      display: flex;
+      width: 100%;
+      flex: 0 0 100%;
+      max-height: 190px;
+      overflow: hidden;
+      margin-bottom: 20px;      
+
+      img {
+        transition: 0.3s all ease-in-out;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1439px) {
+        max-height: 150px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        max-height: 120px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 41.66667%;
+        flex: 0 0 41.66667%;
+        max-height: 180px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        max-height: 150px;
+      }
+    }
+
+    &__item {
+      @include media-breakpoint-down(md) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

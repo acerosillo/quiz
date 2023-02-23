@@ -1,0 +1,85 @@
+/* WHITE */
+
+$cl-white: #FFFFFF;
+$cl-white-opaque: rgba(255, 255, 255, 0.2);
+
+$cl-grey: #f3f3f3;
+$cl-grey2: #F9F9F9;
+$cl-grey-opaque: rgba(243, 243, 243, 0.5);
+
+/* BLUES */
+$cl-blue: #2314A7;
+$cl-blue2: #311BF0;
+$cl-blue3: #786AFF;
+$cl-bluegr: linear-gradient(180deg, #786AFF 0%, #2D1DEF 100%);
+
+$cl-blue-opaque-active: rgba(61, 48, 179, 0.9);
+$cl-blue-opaque-2: rgba(61, 48, 179, 0.2);
+$cl-blue-opaque-3: rgba(61, 48, 179, 0.3);
+/* BLACKS */
+
+$cl-black: #222222;
+$cl-black2: #414141;
+$cl-black3: #FFFFFF;
+$cl-blackgr: linear-gradient(180deg, #FFFFFF 0%, #222222 100%);
+
+/* light blue */
+
+$cl-lblue: #7FB5FD;
+$cl-lblue2: #4A98FD;
+$cl-lblue3: #C0DAFF;
+$cl-lbluegr: linear-gradient(180deg, #C0DAFF 0%, #4A98FD 100%);
+
+
+$cl-lblue3-opaque-hover: rgba(120, 106, 255, 0.1);
+$cl-lblue3-opaque-active: rgba(120, 106, 255, 0.2);
+/* pink */
+
+$cl-pink: #ECA6E5;
+$cl-pink2: #FFA6F6;
+$cl-pink3: #FFD7FA;
+$cl-pink-opaque: #eddcfd;
+$cl-pinkgr: linear-gradient(180deg, #FFD7FA 0%, #FFA6F6 100%);
+
+/* green */
+
+$cl-green: #A8A9F7;
+$cl-green2: #D8FA44;
+$cl-green3: #F6FFD2;
+$cl-greengr: linear-gradient(180deg, #F6FFD2 0%, #D8FA44 100%);
+
+/* yellow */
+
+$cl-yellow: #FFF89A;
+$cl-yellow2: #FFF467;
+$cl-yellow3: #FFFBCB;
+$cl-yellowgr: linear-gradient(180deg, #FFFBCB 0%, #FFF467 100%);
+
+/* porange */
+
+$cl-porange: #FF997F;
+$cl-porange2: #E72F07;
+$cl-porange3: #FA4E20;
+$cl-porange4: #FFCDC6;
+$cl-porangegr: linear-gradient(180deg, #FEF1F0 0%, #FF9B83 100%);
+
+/* orange */
+
+$cl-orange: #D87718;
+$cl-orange2: #B46516;
+$cl-orange3: #FEBD7B;
+$cl-orangegr: linear-gradient(180deg, #FEBD7B 0%, #B46516 100%);
+
+/* red */
+
+$cl-red: #8C1133;
+$cl-red2: #670420;
+$cl-red3: #DE7190;
+$cl-redgr: linear-gradient(180deg, #DE7190 0%, #670420 100%);
+
+/* violet */
+$cl-violet: #A8A9F7;
+$cl-violet2: #E9E9FF;
+
+/* quiz thumbnail */
+$cl-yellowlt: #FDEEDC;

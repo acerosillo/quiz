@@ -1,0 +1,91 @@
+@keyframes bounce {
+  0%   { top: 20px; }
+  50%  { top:-10px; }
+  100% { top: 0; }
+}
+
+@keyframes slideOutLeft {
+  0% { left: 0; opacity: 1; }
+  25% { left: -25%;  opacity: 0.65;}
+  50% { left: -50%;  opacity: 0.35;}
+  75% { left: -75%;  opacity: 0.15;}
+  100% { left: -100%;  opacity: 0;}
+}
+
+@keyframes slideOutRight {
+  0% { right: 0; opacity: 1; }
+  25% { right: -25%;  opacity: 0.65;}
+  50% { right: -50%;  opacity: 0.35;}
+  75% { right: -75%;  opacity: 0.15;}
+  100% { right: -100%;  opacity: 0;}
+}
+
+@keyframes slideInLeft {
+  0% { left: 100%; opacity: 0; }
+  25% { left: 75%;  opacity: 0.25;}
+  50% { left: 50%;  opacity: 0.5;}
+  100% { left: 0;  opacity: 1;}
+}
+
+@keyframes slideInRight {
+  0% { right: 100%; opacity: 0; }
+  25% { right: 75%;  opacity: 0.25;}
+  50% { right: 50%;  opacity: 0.5;}
+  100% { right: 0;  opacity: 1;}
+}
+
+@keyframes fadeInRight {
+  0% { right: 0; opacity: 0; }
+  25% { right: 0;  opacity: 0;}
+  50% { right: 0;  opacity: 0.25;}
+  75% { right: 0;  opacity: 0.5;}
+  100% { right: 0;  opacity: 1;}
+}
+
+@keyframes fadeOutRight {
+  0% { right: 0; opacity: 1; }
+  25% { right: 0;  opacity: 0.65;}
+  50% { right: 0;  opacity: 0.35;}
+  75% { right: 0;  opacity: 0.15;}
+  100% { right: 0;  opacity: 0;}
+}
+
+@keyframes fadeInLeft {
+  0% { left: 0; opacity: 0; }
+  25% { left: 0;  opacity: 0;}
+  50% { left: 0;  opacity: 0.25;}
+  75% { left: 0;  opacity: 0.5;}
+  100% { left: 0;  opacity: 1;}
+}
+
+@keyframes fadeOutLeft {
+  0% { left: 0; opacity: 1; }
+  25% { left: 0;  opacity: 0.65;}
+  50% { left: 0;  opacity: 0.35;}
+  75% { left: 0;  opacity: 0.15;}
+  100% { left: 0;  opacity: 0;}
+}
+
+@keyframes fadeInOpacity {
+  0% { opacity: 0; }
+  25% { opacity: 0;}
+  50% { opacity: 0.25;}
+  75% { opacity: 0.5;}
+  100% { opacity: 1;}
+}
+
+@keyframes fadeInRightMenu {
+  0% { left: 100%; opacity: 0; }
+  25% { left: 75%; opacity: 0.15;}
+  50% { left: 50%; opacity: 0.4;}
+  75% { left: 25%; opacity: 0.55;}
+  100% { left: 0; opacity: 1;}
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  25% { opacity: 0.85;}
+  50% { opacity: 0.65;}
+  75% { opacity: 0.25;}
+  100% { opacity: 0;}
+}

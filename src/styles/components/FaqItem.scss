@@ -1,0 +1,141 @@
+@import "./styles/_typography.scss";
+
+.faqs {
+  width: 100%;
+  padding-bottom: 50px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 40px;
+  }
+
+  &__wrap {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+
+    .card-header {
+      position: relative;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+    }
+
+    .resultblock {
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .spacer {
+      width: 100%;
+      border: 0;
+      margin: 0;
+
+      &-default {
+        margin-bottom: 40px;
+      }
+
+      &-30 {
+        margin-bottom: 30px;
+      }
+
+      &-40 {
+        margin-bottom: 40px;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &-50 {
+        margin-bottom: 50px;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &-60 {
+        margin-bottom: 60px;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+
+  &__mainheading {
+    font-size: 24px;
+    line-height: 32px;
+     padding-bottom: 20px;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 15px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 1.25rem 0;
+    border-bottom: 0;     
+    
+
+    &.collapsed {
+      border: 0;
+      border-top: 1px solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    .icon {
+      right: 0;
+      top: 49%;
+    }
+  }
+
+  .btn-nostyle:not(.collapsed) {
+    .icon-plus {
+      &:after {
+        background-image: url(/static/images/icons/icon_minus_cl_blue.svg);
+        transition: 0.2s all ease-in-out;
+      }
+    }
+  }
+
+  .faqItem {
+    &__wrap {
+      margin-top: -1px;
+
+      &-first {
+        border-top: 1px solid #f1f1f1;
+
+        button {
+          border-top: 0;
+        }
+      }
+    }
+
+    &__content {
+      padding-left: 0;
+      padding-right: 0;
+
+      .ulist {
+        &.abody__list {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
