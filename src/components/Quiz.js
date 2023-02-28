@@ -104,47 +104,47 @@ function Question({ quizQuestions }) {
     );
   }
 
-  return (
-    <div className="quiz">
-      {quizComplete ? (
-        <Fragment>
-          <h1>Quiz complete!</h1>
-          <p>
-            You scored {correctAnswerCount} out of {quizQuestions.length}
-          </p>
-          <button className="restart" onClick={onRestartClick}>
-            Take the quiz again
-          </button>
+  // return (
+  //   <div className="quiz">
+  //     {quizComplete ? (
+  //       <Fragment>
+  //         <h1>Quiz complete!</h1>
+  //         <p>
+  //           You scored {correctAnswerCount} out of {quizQuestions.length}
+  //         </p>
+  //         <button className="restart" onClick={onRestartClick}>
+  //           Take the quiz again
+  //         </button>
 
-          <br />
-          <br />
+  //         <br />
+  //         <br />
 
-          <p>Invite others to take the quiz</p>
-          <ul>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>LinkedIn</li>
-          </ul>
-        </Fragment>
-      ) : (
-        <Fragment>
-          <ProgressBar
-            currentQuestionIndex={questionIndex + 1}
-            totalQuestionsCount={quizQuestions.length}
-          />
-          <Question
-            question={quizQuestions[questionIndex]}
-            setAnswerStatus={setAnswerStatus}
-          />
-
-          <SubAnswer
-            question={quizQuestions[questionIndex]}
-            setAnswerStatus={setAnswerStatus}
-          />
-        </Fragment>
-      )}
-    </div>
-  );
+  //         <p>Invite others to take the quiz</p>
+  //         <ul>
+  //           <li>Facebook</li>
+  //           <li>Twitter</li>
+  //           <li>LinkedIn</li>
+  //         </ul>
+  //       </Fragment>
+  //     ) : (
+  //       <Fragment>
+  //         {/* <ProgressBar
+  //           currentQuestionIndex={questionIndex + 1}
+  //           totalQuestionsCount={quizQuestions.length}
+  //         /> */}
+  //         {/* <Question
+  //           question={quizQuestions[questionIndex]}
+  //           setAnswerStatus={setAnswerStatus}
+  //         /> */}
+  //         {/*
+  //         <SubAnswer
+  //           question={quizQuestions[questionIndex]}
+  //           setAnswerStatus={setAnswerStatus}
+  //         /> */}
+  //       </Fragment>
+  //     )}
+  //   </div>
+  // );
 }
 
 export default Question;

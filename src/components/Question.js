@@ -14,6 +14,7 @@ function Question({
 }) {
   const [showAnswer, setShowAnswer] = useState(false);
   const [selectedOption, setSelectedOption] = useState();
+  const [prevSelOpt, setPrevSelOpt] = useState();
   const [selectedOptionIndex, setSelectedOptionIndex] = useState();
 
   //used for the modal
@@ -29,7 +30,7 @@ function Question({
   const handleOptionClick = (selectedIndex, selectedOption) => {
     setSelectedOption(selectedOption);
 
-    console.log(questionNumber, totalQuestions);
+    //console.log(questionNumber, totalQuestions);
     //go to results
     if (questionNumber === totalQuestions - 1) {
       updateQuizState(null, true);
@@ -51,16 +52,15 @@ function Question({
   const resetQuestionState = () => {
     setShowAnswer(false);
     setSelectedOptionIndex();
+    setPrevSelOpt(selectedOption);
     setSelectedOption();
   };
 
   const goBack = () => {
-    //setShowAnswer(false);
-    // console.log(questionNumber - 1);
-    // console.log("test : " + showAnswer);
-    // console.log(selectedIndex - 1);
-
-    updateQuizState(questionNumber - 1);
+    setActive(true);
+    setShowAnswer(true);
+    updateQuizState(prevSelOpt, false, true);
+    //console.log(prevSelOpt);
   };
 
   // const restartQuiz = () => {
@@ -178,7 +178,13 @@ function Question({
                                 <button
                                   className="btn-fill--blue btn btn-main btn-fill"
                                   onClick={() => {
-                                    updateQuizState(selectedOption);
+                                    console.log(selectedOption);
+                                    console.log(prevSelOpt);
+                                    updateQuizState(
+                                      selectedOption === undefined
+                                        ? prevSelOpt
+                                        : selectedOption
+                                    );
                                     resetQuestionState();
                                     setActive(false);
                                   }}

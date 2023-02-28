@@ -199,11 +199,18 @@ const Quiz = ({ quizQuestionsLive, teaserQuestion }) => {
               question={questions[quizState.questionNumber]}
               questionNumber={quizState.questionNumber}
               totalQuestions={quizState.questions.length}
-              updateQuizState={(selectedOption, quizFinished) => {
+              updateQuizState={(selectedOption, quizFinished, goBack) => {
+                //   console.log(selectedOption);
+
                 if (quizFinished) {
                   setQuizState({
                     ...quizState,
                     quizFinished: true,
+                  });
+                } else if (goBack) {
+                  setQuizState({
+                    ...quizState,
+                    questionNumber: quizState.questionNumber - 1,
                   });
                 } else {
                   setQuizState({
