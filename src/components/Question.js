@@ -59,6 +59,7 @@ function Question({
   const goBack = () => {
     setActive(true);
     setShowAnswer(true);
+    setSelectedOption(prevSelOpt);
     updateQuizState(prevSelOpt, false, true);
     //console.log(prevSelOpt);
   };
